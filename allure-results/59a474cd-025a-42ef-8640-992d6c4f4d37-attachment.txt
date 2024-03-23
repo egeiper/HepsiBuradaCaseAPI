@@ -1,0 +1,12 @@
+Url = /user
+ 
+Request Headers = Accept=*/*
+Content-Type=application/json
+ 
+Request Body = {"username":"egeiper","firstName":"Ege","lastName":"İper","email":"egeiper@hotmail.com","password":null,"phone":null,"userStatus":0}
+ 
+Response Body = {
+    "code": 200,
+    "type": "unknown",
+    "message": "9223372036854756307"
+}

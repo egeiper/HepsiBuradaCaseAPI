@@ -1,0 +1,12 @@
+Url = /user/egeiper
+ 
+Request Headers = Accept=*/*
+Content-Type=application/json
+ 
+Request Body = null
+ 
+Response Body = {
+    "code": 200,
+    "type": "unknown",
+    "message": "egeiper"
+}

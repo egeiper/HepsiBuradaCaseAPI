@@ -1,0 +1,12 @@
+Url = /user/egeiper
+ 
+Request Headers = Accept=*/*
+Content-Type=application/json
+ 
+Request Body = null
+ 
+Response Body = {
+    "code": 1,
+    "type": "error",
+    "message": "User not found"
+}

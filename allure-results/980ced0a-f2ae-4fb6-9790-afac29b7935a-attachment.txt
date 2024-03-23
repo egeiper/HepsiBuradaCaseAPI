@@ -1,0 +1,15 @@
+Url = /user/egeiper
+ 
+Request Headers = Accept=*/*
+Content-Type=application/json
+ 
+Request Body = null
+ 
+Response Body = {
+    "id": 9223372036854755953,
+    "username": "egeiper",
+    "firstName": "Ege",
+    "lastName": "İper",
+    "email": "egeiper@hotmail.com",
+    "userStatus": 0
+}
