@@ -5,7 +5,7 @@ This is a demo project for case given by HepsiBurada.
 ### Stack:
 - Language: Java
 - Framework: Rest Assured, Newman
-- Build Tool: Gradle
+- Build Tool: Gradle, Maven
 - Test Framework: TestNG
 - Reporting: Allure
 - CI/CD: GitHub Actions
@@ -13,6 +13,7 @@ This is a demo project for case given by HepsiBurada.
 
 ### How to use ?
 - To execute tests with Gradle, `./gradlew test` command can be used.
+- To execute tests with TestNG,  `mvn clean test -Dsurefire.suiteXmlFiles=tests.xml`
 - To display report after test execution, `allure serve allure-results` command can be used.
 - To execute tests with Newman,
   - Install newman -> `$ npm install -g newman`
