@@ -21,3 +21,6 @@ This is a demo project for case given by HepsiBurada.
 
 ### How to execute tests on GitHub Actions ?
 - Go to Actions tab and run the "Run with Newman" workflow. Worfklow will setup java and newman. Then it will run the postman collection.
+
+
+![readme_img_1.png](images%2Freadme_img_1.png)
