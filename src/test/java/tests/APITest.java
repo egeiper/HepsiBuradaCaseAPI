@@ -37,16 +37,28 @@ public class APITest extends RestClient {
 
         final Response response = post("/user", null, null, request);
         assertEquals(response.getStatusCode(), 200);
+        assertEquals("unknown", response.jsonPath().getString("type"));
+        assertEquals(200, response.jsonPath().getInt("code"));
+
     }
 
     @Test(priority = 2)
     public void getUser() {
         final Response response = get("/user/"+USERNAME, null, null, null);
         assertEquals(200, response.getStatusCode());
+        assertEquals(USERNAME, response.jsonPath().getString("username"));
+        assertEquals(FIRST_NAME, response.jsonPath().getString("firstName"));
+        assertEquals(LAST_NAME, response.jsonPath().getString("lastName"));
+        assertEquals(EMAIL, response.jsonPath().getString("email"));
+        assertEquals(0, response.jsonPath().getInt("userStatus"));
     }
 
     @AfterTest
     public void deleteData() {
-        delete("/user/"+USERNAME, null, null, null);
+        final Response response = delete("/user/"+USERNAME, null, null, null);
+        assertEquals(response.getStatusCode(), 200);
+        assertEquals(USERNAME, response.jsonPath().getString("message"));
+        assertEquals(200, response.jsonPath().getInt("code"));
+        assertEquals("unknown", response.jsonPath().getString("type"));
     }
 }
