@@ -20,6 +20,7 @@ public class APITest extends RestClient {
 
     @BeforeTest
     public void beforeTest() {
+        // delete if data exists with given username to avoid conflict
         if(get("/user/"+USERNAME,null, null, null).getStatusCode() == 200) {
             assertEquals(200, delete("/user/"+USERNAME, null, null, null).getStatusCode());
 
